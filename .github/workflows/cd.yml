@@ -30,3 +30,5 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v2'
         with:
           project_id: notely-473023
+      - name: Build and push Docker image
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-473023/notely-ar-repo/notely:latest .
